@@ -1,17 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo, { ReactComponent } from './logo.svg';
 import './App.css';
 
-function App() {
-  const state = {
-    code : "12321"
+
+class App extends Component {
+  constructor(props) {
+    super(props); 
+    this.state = {code : 1}
   }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} onClick={() => alert(1)} className="App-logo" alt="logo" />
         <p>
-          Edit <code>{state.code}</code> and save to reload.
+          Edit <code>{this.state.code+1}</code> and save to reload.
         </p>
         <a
           className="App-link"
